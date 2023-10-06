@@ -941,8 +941,8 @@ def scan_main(argv):
         exe_path = os.path.relpath(binary['exe_path'])
         bc_path = os.path.relpath(binary['bc_path'])
 
-        printf('Analyze %s? [Y/n] ', colors.bold(exe_path))
-        answer = sys.stdin.readline().strip().lower()
+        #printf('Analyze %s? [Y/n] ', colors.bold(exe_path))
+        answer = 'y' #sys.stdin.readline().strip().lower()
 
         if answer in ('', 'y', 'yes'):
             cmd = ['ikos', bc_path, '-o', '%s.db' % exe_path]
